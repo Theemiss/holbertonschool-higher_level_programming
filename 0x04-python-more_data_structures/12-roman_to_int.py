@@ -6,14 +6,14 @@ def roman_to_int(roman_string):
     }
     if not isinstance(roman_string, str):
         return 0
-    value = 0
+    v = 0
     c = 0
     l = len(roman_string)
     while c < l:
         if c + 1 < l and roman_string[c:c + 2] in roman:
-            value += roman[roman_string[c:c + 2]]
+            v += roman[roman_string[c:c + 2]]
             c += 2
         else:
-            value += roman[roman_string[c]]
+            v += roman[roman_string[c]]
             c += 1
-    return value
+    return v
