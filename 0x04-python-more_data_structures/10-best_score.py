@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
     m = 0
-    b = ''
-    if a_dictionary is None:
+    res = ""
+    if a_dictionary:
+        for k, v in a_dictionary.items():
+            if v > m:
+                res = k
+                m = v
+        return res
+    else:
         return None
-    for i in a_dictionary.keys():
-        if a_dictionary[i] > m:
-            m = a_dictionary[i]
-            b = i
-    return b
