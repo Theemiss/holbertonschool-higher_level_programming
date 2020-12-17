@@ -4,7 +4,10 @@ def roman_to_int(roman_string):
         return 0
     n = 0
     rom_to_int = {
-        'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000
+        {
+        "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "DM": 900,
+        "M": 1000, "IV": 4, "IX": 9, "XL": 40, "XC": 90, "CD": 400
+    }
         }
     for i in roman_string:
         for j in rom_to_int.keys():
