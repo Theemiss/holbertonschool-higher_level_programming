@@ -12,6 +12,9 @@ class Square:
         """initializes the square
         Args:
             size (int): size of a side of the square
+        Raises:
+            TypeError: if size is not int
+            ValueError: size less than 0
         Returns:
             None
         """

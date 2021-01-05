@@ -13,29 +13,14 @@ class Square:
         Initialize methode
 
         Args:
-            size (int): size of square
-        """
-        self.__set(size)
-
-    def __get(self):
-        """
-        getter of instance
-        """
-        return self.__size
-
-    def __set(self, size):
-        """
-        setter of instance
-
-        Args:
             size (int): int to assign to square size
         Raises:
             TypeError: if size is not int
             ValueError: size less than 0
         """
-        if not type(size) is int:
+        if type(size) != int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
