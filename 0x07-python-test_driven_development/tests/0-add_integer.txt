@@ -1,0 +1,54 @@
+The ``add_ integer`` module
+======================
+
+using ``add_integer``
+
+----------------------
+
+Importing the module
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Checking module Docstring
+    >>> c = __import__("0-add_integer").__doc__
+    >>> len(c) > 1
+    True
+
+Testing Normal Addition
+    >>> add_integer(1, 5)
+    6
+
+Testing Negative Number
+    >>> add_integer(100, -5)
+    95
+
+Testing The default Variable b= 98
+    >>> add_integer(2)
+    100
+
+Testing Emty args Raise Error
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Testing A float Return int
+    >>> add_integer(100.3, -2)
+    98
+
+Testing  not int variable for b
+    >>> add_integer(2, "Holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Testing  not int variable for a
+    >>> add_integer("school", 10)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Testing with more than 2 args
+    >>> add_integer(5, 2, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
