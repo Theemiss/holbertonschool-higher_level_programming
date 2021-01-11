@@ -13,6 +13,7 @@ class Rectangle:
             width (int): Private instance attr
             height (int) : Private instance attr
             number_of_instances (int) : Public Class attribute
+            print_symbol (any type): Public Class attribute
         """
     number_of_instances = 0
     print_symbol = '#'
