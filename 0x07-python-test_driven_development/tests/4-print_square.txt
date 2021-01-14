@@ -35,3 +35,9 @@ Testing size is float and less than 0
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
+
+Testing missing 1 arg
+    >>W print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
