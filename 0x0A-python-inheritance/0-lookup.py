@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-module lookup
+module of the lookup function
 """
 
 
 def lookup(obj):
-    """lookup into another class"""
+    """returns a list of available attributes and methods of an object"""
     return dir(obj)
