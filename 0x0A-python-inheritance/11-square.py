@@ -13,8 +13,9 @@ class Square(Rectangle):
         """
             Initialize the square base on Rectangle
         """
+        self.integer_validator('size', size)
         self.__size = size
-        self.integer_validator('size', self.__size)
+        super().__init__(size, size)
 
     def area(self):
         """
@@ -26,4 +27,4 @@ class Square(Rectangle):
         """
             __str__
         """
-        return ("[Rectangle] {}/{}".format(self.__size, self.__size))
+        return ("[Square] {:d}/{:d}".format(self.__size, self.__size))
