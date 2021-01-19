@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """
-    module lookup
-    """
+module lookup
+"""
 
 
 def lookup(obj):
-    """
-    lookup into another class
-        """
+    """lookup into another class"""
     return dir(obj)
