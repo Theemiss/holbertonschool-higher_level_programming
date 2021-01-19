@@ -1,28 +1,57 @@
-using "my_list" from "1-my_list"
---------------------------------
+The ``1-my_list`` module
+======================
 
-testting import:
-    >>> MyList = __import__('1-my_list').MyList
+Using ``MyList``
+-------------------
 
-testting emty list
-    >>> my_list = MyList()
-    >>> my_list.print_sorted()
-    []
+Importing the function from the module:
+    >>> MyList = __import__("1-my_list").MyList
 
-testting Type
-    >>> my_list = MyList()
-    >>> type(my_list)
-    <class '1-my_list.MyList'>
+Testing for module docstring:
+    >>> m = __import__("1-my_list").__doc__
+    >>> len(m) > 1
+    True
 
-testting list
-    >>> my_list.append(1)
-    >>> my_list.append(4)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5)
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
+Testing for class docstring:
+    >>> c = __import__("1-my_list").MyList.__doc__
+    >>> len(c) > 1
+    True
 
-testting print
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
+Testing for method docstring:
+	>>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> len(mod) > 1
+	True
+
+Testing that MyList inherits from list:
+	>>> issubclass(MyList, list)
+	True
+
+Testing for empty list:
+	>>> l = MyList()
+	>>> l.print_sorted()
+	[]
+
+Testing that appendng works:
+	>>> l.append(1)
+	>>> l.append(2)
+	>>> l.append(3)
+	>>> l.append(4)
+	>>> print(l)
+	[1, 2, 3, 4]
+
+Testing for list already in correct order:
+	>>> l.print_sorted()
+	[1, 2, 3, 4]
+
+Testing for reversed order list:
+	>>> l = MyList()
+	>>> l.append(4)
+	>>> l.append(3)
+	>>> l.append(2)
+	>>> l.append(1)
+	>>> print(l)
+	[4, 3, 2, 1]
+	>>> l.print_sorted()
+	[1, 2, 3, 4]
+	>>> print(l)
+	[4, 3, 2, 1]
