@@ -182,4 +182,3 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(1, 1, 0, 0, 1)
         r.update(2, 2, 2, 2, 2, width=3, height=3, x=3, y=3, id=3)
         self.assertEqual(str(r), "[Rectangle] (2) 2/2 - 2/2")
-

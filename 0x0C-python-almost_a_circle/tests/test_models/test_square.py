@@ -24,23 +24,19 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(self.s1.id, 1)
         self.assertEqual(self.s2.id, 2)
 
-
     def test_size(self):
         """Test for functioning size"""
         self.assertEqual(self.s1.size, 1)
         self.assertEqual(self.s2.size, 2)
 
-
     def test_width(self):
         self.assertEqual(self.s1.width, 1)
         self.assertEqual(self.s2.width, 2)
-
 
     def test_height(self):
         """Test for functioning height"""
         self.assertEqual(self.s1.height, 1)
         self.assertEqual(self.s2.height, 2)
-
 
     def test_x(self):
         """Test for functioning x"""
@@ -51,7 +47,6 @@ class TestSquare(unittest.TestCase):
         """Test for functioning y"""
         self.assertEqual(self.s1.y, 0)
         self.assertEqual(self.s2.y, 0)
-
 
     def mandatory_size(self):
         """Test that width is a mandatory arg"""
@@ -101,7 +96,6 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(self.s1.area(), 1)
         self.assertEqual(self.s2.area(), 4)
 
-
     def test_area_args(self):
         """Test too many args for area()"""
         with self.assertRaises(TypeError):
@@ -111,4 +105,3 @@ class TestSquare(unittest.TestCase):
         """Test display with too many args"""
         with self.assertRaises(TypeError):
             self.s1.display(1)
-
