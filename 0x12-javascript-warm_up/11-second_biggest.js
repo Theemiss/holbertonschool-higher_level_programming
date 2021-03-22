@@ -1,14 +1,18 @@
 #!/usr/bin/node
-let Max = 0;
-const MyArr = process.argv;
-if (MyArr.length === 3) {
-  Max = 0;
-} else {
-  for (let i = 2; i <= MyArr.length; i++) {
-    if (parseInt(MyArr[i]) >= Max) {
-      Max = MyArr[i];
+function nextBiggest (arr) {
+  let max = 0; let result = 0;
+
+  for (const value of arr) {
+    const nr = Number(value);
+
+    if (nr > max) {
+      [result, max] = [max, nr];
+    } else if (nr < max && nr > result) {
+      result = nr;
     }
   }
+
+  return result;
 }
 
-console.log(Max);
+console.log(nextBiggest(process.argv));
