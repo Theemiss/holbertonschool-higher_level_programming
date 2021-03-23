@@ -13,7 +13,7 @@ module.exports = class Square extends Rectangle {
       for (let i = 0; i < this.width; i++) {
         A += c;
       }
-      for (let i = 0; i < this.width; i++) {
+      for (let i = 0; i < this.height; i++) {
         console.log(A);
       }
     }
