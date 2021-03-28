@@ -22,10 +22,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    re =  session.query(State).all()
+    re = session.query(State).all()
     for x in re:
         print("{}: {}".format(x.id, x.name))
         for r in x.cities:
             print("    {}: {}".format(r.id, r.name))
- 
     session.close()
