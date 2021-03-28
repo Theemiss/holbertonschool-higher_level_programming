@@ -4,7 +4,7 @@ prints the State object with the name passed as
 argument from the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State
 from relationship_city import City
 
@@ -20,10 +20,10 @@ if __name__ == "__main__":
                             pool_pre_ping=True
                                 )
     Base.metadata.create_all(engine)
-    session = Session(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
     new_State = State(name="California")
     new_State.cities = [City(name="San Francisco")]
     re = session.add(new_State)
     session.commit()
-    print(new_State.id)
     session.close()
