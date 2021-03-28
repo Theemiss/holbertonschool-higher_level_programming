@@ -16,11 +16,12 @@ def main():
                         charset="utf8"
                             )
     cur = conn.cursor()
-    query = "SELECT id,name FROM states WHERE name LIKE 'N%' ORDER by id ASC"
+    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
     cur.execute(query)
     row = cur.fetchall()
     for r in row:
-        print(r)
+        if r[1][0] == 'N':
+            print(r)
     cur.close()
     conn.close()
 
