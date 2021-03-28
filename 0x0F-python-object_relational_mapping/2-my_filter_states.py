@@ -19,12 +19,13 @@ def main():
                             )
     cur = conn.cursor()
     search = sys.argv[4]
-    query = """SELECT id,name FROM states where name = '{:s}'
+    query = """SELECT * FROM states where name = '{:s}'
             ORDER by id ASC""".format(search)
     cur.execute(query)
     row = cur.fetchall()
     for r in row:
-        print(r)
+        if r[1] == search:
+            print(r)
     cur.close()
     conn.close()
 
