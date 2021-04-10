@@ -8,7 +8,7 @@ with the letter as a parameter.
 """
 
 if __name__ == '__main__':
-    url = "http://30b328ab6d6e.0a98cdc3.hbtn-cod.io:5000/search_user"
+    url = "http://0.0.0.0:5000/search_user"
     try:
         ar = sys.argv[1]
     except Exception:
