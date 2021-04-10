@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-import urllib.request
-import urllib.error
-import sys
 """
 request a body if error display statue code
 """
 
 if __name__ == '__main__':
+    import urllib.request
+    import urllib.error
+    import sys
     url = sys.argv[1]
 
     req = urllib.request.Request(url)
