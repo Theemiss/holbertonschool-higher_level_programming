@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const SquareA = require('./5-square.js');
+const SquareA = require('./4-rectangle.js');
 module.exports = class Square extends SquareA {
   charPrint (c) {
     if (c === undefined) {
